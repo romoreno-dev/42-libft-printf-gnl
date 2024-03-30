@@ -21,13 +21,6 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-/**
- * @brief (get_next_line) Reads a single line from a file descriptor.
- *
- * @param fd File descriptor (Example: 0 stdin).
- */
-char	*get_next_line(int fd);
-
 char	*ft_read_and_storage_in_buffer(int fd, char *static_buffer);
 char	*ft_strchr(char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);

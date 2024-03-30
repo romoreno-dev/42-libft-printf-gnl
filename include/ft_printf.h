@@ -18,16 +18,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-/**
- * @brief Prints the string str and, attending to the format
- * specifiers cspdiuxX, prints the variable arguments when if required.
- *
- * @param str String format with format specifiers
- * @param ... Variable arguments that are required by the string format
- * @return
- */
-int		ft_printf(char const *str, ...);
-
 int		ft_putchar_count(char c);
 int		ft_putstr_count(char *s);
 int		ft_putptr_count(void *ptr);

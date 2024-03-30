@@ -423,4 +423,21 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+/**
+ * @brief Prints the string str and, attending to the format
+ * specifiers cspdiuxX, prints the variable arguments when if required.
+ *
+ * @param str String format with format specifiers
+ * @param ... Variable arguments that are required by the string format
+ * @return
+ */
+int		ft_printf(char const *str, ...);
+
+/**
+ * @brief (get_next_line) Reads a single line from a file descriptor.
+ *
+ * @param fd File descriptor (Example: 0 stdin).
+ */
+char	*get_next_line(int fd);
+
 #endif
