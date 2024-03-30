@@ -10,6 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+## Silent Makefile (Doesnt print instructions on console)
 # Variables
 NAME 						:= libft.a
 COMPILER 					:= gcc -Wall -Wextra -Werror -c
@@ -55,9 +56,7 @@ GET_NEXT_LINE_OBJ = 		$(addprefix $(GET_NEXT_LINE_OBJ_ROUTE), $(addsuffix .o, $(
 all:						$(NAME)
 
 $(NAME):					$(LIBFT_OBJ) $(PRINTF_OBJ) $(GET_NEXT_LINE_OBJ)
-							@echo "Creating $(NAME)..."
 							@$(ARCHIVER) $(NAME) $^
-							@echo "$(GREEN)$(BOLD)$(NAME) created!$(PRINT_TEXT)"
 
 $(LIBFT_OBJ):				$(LIBFT_SRC)
 							@mkdir -p $(LIBFT_OBJ_ROUTE)
@@ -75,13 +74,10 @@ $(GET_NEXT_LINE_OBJ):		$(GET_NEXT_LINE_SRC)
 							@mv $(addsuffix .o, $(GET_NEXT_LINE_NAMEFILES)) $(GET_NEXT_LINE_OBJ_ROUTE)
 
 clean:
-							@echo "Cleaning..."
 							@$(REMOVER) obj/
-							@echo "$(BLUE)All objects files were cleaned!$(PRINT_TEXT)"
 
 fclean: 					clean
 							@$(REMOVER) $(NAME)
-							@echo "$(BLUE)All compiled files were cleaned!$(PRINT_TEXT)"
 
 re: 						fclean all
 
